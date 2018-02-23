@@ -15,6 +15,16 @@ class Main extends Component {
     }
   }
 
+  selectBox = (row, col) => {
+    let gridCopy = arrayClone(this.state.gridFull);
+
+    gridCopy[row][col] = !gridCopy[row][col];
+
+    this.setState({
+      gridFull: gridCopy
+    });
+  }
+
   render() {
     return (
       <div>
@@ -23,6 +33,7 @@ class Main extends Component {
           gridFull={this.state.gridFull}
           rows={this.rows}
           cols={this.cols}
+          selectBox={this.selectBox}
         />
         <h2>Generations: {this.state.generation}</h2>
       </div>
@@ -30,4 +41,10 @@ class Main extends Component {
   }
 }
 
-  export default Main;
+function arrayClone(arr) {
+  let clonedArr = arr.map(innerArr => innerArr.slice());
+
+  return clonedArr;
+}
+
+export default Main;

@@ -19,6 +19,7 @@ class Grid extends Component {
           key={boxId}
           row={rowId}
           col={colId}
+          selectBox={this.props.selectBox}
         />;
       }) // end of column map
     ); // end of row map
