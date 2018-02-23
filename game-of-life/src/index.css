@@ -1,0 +1,52 @@
+body {
+  background-color: #336;
+}
+
+.box {
+  display: inline-block;
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+}
+
+.off {
+  background-color: #DDD;
+}
+
+.on {
+  background-color: #6F6;
+}
+
+.box:hover {
+  background-color: #4EF;
+}
+
+.center {
+  margin: auto;
+  display: table;
+  margin-top: 10px;
+}
+
+.grid {
+  width: 150px;
+  line-height: 0;
+  margin: auto;
+  -moz-box-shadow: 0x 0px 20px white;
+  -webkit-box-shadow: 0x 0px 20px white;
+  box-shadow: 0px 0px 20px #FFF;
+  margin-top: 20px;
+}
+
+h1, h2, h3, h4 {
+  color: #FFF;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 10px;
+}
+
+h4 {
+  margin-top: 0px;
+}
