@@ -10,23 +10,23 @@ class Buttons extends Component {
     return (
       <div className="center">
         <ButtonToolbar>
-          <button className="btn btn-default" onClick={this.props.playButton}>
-            Play
+          <button className="btn btn-default" onClick={this.props.seedButton}>
+            Seed
           </button>
-          <button className="btn btn-default" onClick={this.props.pauseButton}>
-            Pause
+          <button className="btn btn-default" onClick={this.props.slowButton} alt="Slow">
+            <i className="fa fa-backward"></i>
+          </button>
+          <button className="btn btn-default" onClick={this.props.pauseButton} alt="Pause">
+            <i className="fa fa-pause"></i>
+          </button>
+          <button className="btn btn-default" onClick={this.props.playButton} alt="Play">
+            <i className="fa fa-play"></i>
+          </button>
+          <button className="btn btn-default" onClick={this.props.fastButton} alt="Fast">
+            <i className="fa fa-forward"></i>
           </button>
           <button className="btn btn-default" onClick={this.props.clearButton}>
             Clear
-          </button>
-          <button className="btn btn-default" onClick={this.props.slowButton}>
-            Slower
-          </button>
-          <button className="btn btn-default" onClick={this.props.fastButton}>
-            Faster
-          </button>
-          <button className="btn btn-default" onClick={this.props.seedButton}>
-            Seed
           </button>
           <DropdownButton
             title="Grid Size"

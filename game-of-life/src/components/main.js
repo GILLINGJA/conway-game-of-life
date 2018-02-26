@@ -61,18 +61,14 @@ class Main extends Component {
   slow = () => {
     if(this.speed < 2000) this.speed += 100;
 
-    clearInterval(this.intervalId);
-    this.intervalId = setInterval(this.advance, this.speed);
-    console.log(this.speed);
+    this.play();
   }
 
   // quicken the advancement through the generations
   fast = () => {
     if(this.speed > 100) this.speed -= 100;
 
-    clearInterval(this.intervalId);
-    this.intervalId = setInterval(this.advance, this.speed);
-    console.log(this.speed);
+    this.play();
   }
 
   // change grid size
@@ -92,7 +88,7 @@ class Main extends Component {
 
     }
 
-    clearInterval(this.intervalId);
+    this.clear();
     this.setState({ gridFull: Array(this.rows).fill().map(() => Array(this.cols).fill(false)),
                     generation: 0 });
   }
@@ -144,7 +140,7 @@ class Main extends Component {
           cols={this.cols}
           selectBox={this.selectBox}
         />
-        <h2>Generations: {this.state.generation}</h2>
+        <h4>Generation: {this.state.generation}</h4>
       </div>
     );
   }
